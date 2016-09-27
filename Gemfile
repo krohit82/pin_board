@@ -2,10 +2,8 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.4'
-gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
+gem 'uglifier', '>= 1.3.0'# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
@@ -26,9 +24,15 @@ gem 'acts_as_votable', '~> 0.10.0'
 
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'sqlite3'
+
 end
 
 group :development do

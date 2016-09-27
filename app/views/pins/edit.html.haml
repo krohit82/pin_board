@@ -1,5 +1,10 @@
-%h1 Edit Pin
-
-= render 'form'
-
-= link_to "Cancel", pin_path 
+.col-md-6.col-md-offset-3
+	.row
+		.panel.panel-default
+			.panel-heading
+				%h1 Edit Pin
+			.panel-body
+				= image_tag @pin.image.url(:medium)
+				= render 'form'
+			.panel-footer
+				= link_to "Cancel", pin_path 
